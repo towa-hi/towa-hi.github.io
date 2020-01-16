@@ -7,6 +7,36 @@
     </div>
     <div id="content-wrapper">
 	<div id="text-box" class="content-box">
+		<h3>January 16, 2020</h3>
+		<img src="https://i.imgur.com/bcsYlN3.png"/>
+		<p>Made a rough map of the menu screens for my game.</p>
+		<img src="https://cdn.discordapp.com/attachments/91529571714732032/663881890289418317/IMG_MI6_20200106_150755.jpg"/>
+		<p>	
+			>T: I feel like I'm doing this wrong. I need a nested state machine for die. Death should happen regardless of state.<br>
+			>T: there's no reason to even hav direction in the state graph<br>
+			>C: sure there is, prevents bad transitions<br>
+			>T: hm<br>
+			>T: this graph is going to get complicated really quick then<br>
+			>T: this would be easier to write if I had a superstate for dead/alive<br>
+		</p>
+		<img src="https://media.discordapp.net/attachments/91529571714732032/663888817601773599/IMG_MI6_20200106_153444.jpg"/>
+		<img src="https://cdn.discordapp.com/attachments/91529571714732032/663890809518555167/IMG_MI6_20200106_154408.jpg"/>
+		<p>
+			>T: can I have multiple state machines, with one taking precedence over another? <br>
+			>L: remember all your lines between states should essentially be booleans<br>
+			>T: I think they all are<br>
+			>T: I guess nested state machines are basically how video games work.<br>
+			>T: https://barrgroup.com/embedded-systems/how-to/introduction-hierarchical-state-machines<br>
+			>L: yea nested state machines are very common<br>
+			>L: UE4 is full of them, especially in the animation system.<br>
+			>L: A state might be "walking" instead of "jumping" or "standing", and then walking has it's own state machine to determine the type of walk (direction, speed)<br>
+			>T: for something like Mario he would need multiple fsms. one for dead/alive, one for horizontal vector, one for jumping/on ground<br>
+			>T: and also this one<br> 
+			<img src="https://www.ashishvishwakarma.com/GoF-Design-Patterns-by-Example/State-Pattern/assets/mario-finite-state-machine.jpg">
+		</p>
+		<h3>January 13, 2020</h3>
+		<p>UI mockup</p>
+		<img src="https://media.discordapp.net/attachments/91529571714732032/666485833087582228/IMG_MI6_20200113_193522.jpg">
 		<h3>January 4, 2020</h3>
 		<p>Coffee for breakfast. Working through the 2d Roguelike tutorial for Unity. Ran into an annoying issue involving this error:<b>Project has invalid dependencies: com.unity.package-manager-ui: Package [com.unity.package-manager-ui@2.1.2] cannot be found</b>. I fixed it by reimporting all my packages. Then I ran into this annoying thing:</p>
 		<img src="https://cdn.discordapp.com/attachments/441153556964442113/663103810906095627/unknown.png">
